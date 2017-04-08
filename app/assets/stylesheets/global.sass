@@ -1,0 +1,131 @@
+// This is your framework's main stylesheet. Use it to import all default modules.
+@import compass/css3
+
+@import variables
+
+@import ./mixins/buttons
+@import ./mixins/inputs
+@import ./mixins/links
+
+html, body
+  height: 100%
+
+body
+  color: $text_color
+  font-family: 'Roboto', 'PT Sans', sans-serif
+  font-size: $font_size
+  margin: 0 auto
+  text-rendering: optimizeLegibility
+  min-width: 1000px
+  width: 100%
+
+  .container
+    padding: 0 30px
+    margin: 0 auto
+    max-width: 1500px
+
+.vertical-middle
+  height: 100%
+
+  &:before
+    content: ''
+    display: inline-block
+    height: 100%
+    vertical-align: middle
+
+  *
+    vertical-align: middle
+
+//==========================================================
+// links
+//==========================================================
+
+a
+  +link
+
+//==========================================================
+// buttons
+//==========================================================
+
+.button
+  +button
+
+.form-button
+  +form_button
+
+input[type=submit]
+  +form_button
+  -webkit-appearance: none
+  width: auto
+
+//==========================================================
+// inputs
+//==========================================================
+
+input
+  +input
+  width: $input_width
+
+  &[type=checkbox]
+    width: 20px
+
+//==========================================================
+// textareas
+//==========================================================
+
+textarea
+  +input
+  border: 1px solid $border_color
+  overflow: auto
+  width: $input_width
+
+//==========================================================
+// titles
+//==========================================================
+
+h1
+  font-size: $font_size_h1
+  margin: 26px 0 36px
+
+//==========================================================
+// forms
+//==========================================================
+
+.b-form
+  .b-input
+    margin-top: 10px
+
+    &.field-with-errors
+      input
+        border-color: $input_error_border_color
+
+    label
+      display: inline-block
+      width: $label_width
+      vertical-align: top
+
+      abbr[title="required"]
+        display: none
+
+    .error
+      color: $input_error_color
+      display: block
+      font-size: 16px
+      margin-left: $label_width
+
+    span.hint
+      display: block
+      font-size: 16px
+      margin-top: 12px
+
+    &.check_boxes
+      .checkbox
+        display: block
+
+.actions
+  margin-top: 50px
+
+  .button,
+  .form-button,
+  input
+    margin-right: 30px

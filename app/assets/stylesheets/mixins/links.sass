@@ -1,0 +1,29 @@
+=link
+  +link_template($link_color, $link_color_hover)
+
+=black_link
+  +link_template($text_color, $link_color_hover)
+
+=white_link
+  +link_template($white_link_color, $white_link_color_hover)
+
+=ajax_black_link
+  +black_link
+  border-bottom-style: dotted
+
+  &:hover
+    border-bottom-color: $link_color_hover
+    color: $link_color_hover
+
+=link_template($color, $color_hover)
+  color: $color
+  border: none
+  cursor: pointer
+  text-decoration: none
+
+  &:visited
+    color: $color
+
+  &:hover
+    color: $color_hover
+    border: none

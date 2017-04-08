@@ -1,0 +1,41 @@
+.p-tasks-index
+  .tabs
+    margin-bottom: 40px
+
+    .tab
+      margin-right: 15px
+
+  .tasks
+    margin-top: 30px
+
+    .task
+      td
+        height: 32px
+        padding-right: 10px
+
+      a.status
+        display: inline-block
+        width: 16px
+        height: 16px
+
+        &.unchecked
+          background: inline-image('iconmonstr-checkbox-11-32.png') no-repeat
+          background-size: contain
+
+        &.checked
+          background: inline-image('iconmonstr-checkbox-9-32.png') no-repeat
+          background-size: contain
+
+      .status
+        a
+          margin-top: 3px
+
+      .priority
+        display: inline-block
+        line-height: 16px
+        height: 32px
+        width: 12px
+
+      .actions
+        a
+          margin-right: 10px

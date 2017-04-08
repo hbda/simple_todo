@@ -1,0 +1,59 @@
+// hover styles and color property for .active are required
+// for the situation when link is used as a button: a.button
+// (to override link styles)
+=button
+  +border-radius(3px)
+  background-color: $not_active_button_bg_color
+  border: 1px solid $not_active_button_bg_color
+  border-bottom-color: $not_active_button_border_color
+  color: $text_color
+  cursor: pointer
+  display: inline-block
+  font-size: 16px
+  height: 30px
+  line-height: 30px
+  padding: 0 16px
+  text-align: center
+
+  &:hover
+    border-bottom-color: $not_active_button_border_color
+    border: 1px solid $not_active_button_bg_color
+    color: $text_color
+
+  &:visited
+    color: $text_color
+
+  &.active
+    background-color: $active_button_bg_color
+    border-bottom-color: $active_button_border_color
+    color: $text_color
+    cursor: default
+
+    &:hover
+      border-bottom-color: $active_button_border_color
+      color: $text_color
+
+    &:visited
+      color: $text_color
+
+  &.pressed
+    background-color: $active_button_bg_color
+    border-bottom-color: $active_button_bg_color
+    border-top-color: $active_button_border_color
+
+  &.disabled
+    background-color: $disabled_button_bg_color
+    border-color: $disabled_button_bg_color
+    color: $disabled_button_color
+
+=big_button
+  +button
+  font-size: 20px
+  height: 72px
+  line-height: 72px
+  padding: 0 54px
+
+=form_button
+  +big_button
+  background-color: $active_button_bg_color
+  border-bottom-color: $active_button_border_color

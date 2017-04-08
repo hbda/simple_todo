@@ -1,0 +1,12 @@
+h1 Задача
+table
+  tr
+    td.label = Task.human_attribute_name(:name)
+    td.task_name = @task.name
+  tr
+    td.label = Task.human_attribute_name(:description)
+    td.task_description = @task.description
+
+.actions
+  a.form-button href=edit_task_url(@task) Изменить
+  a.cancel href=tasks_url Назад

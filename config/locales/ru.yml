@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    models:
+      task:
+        one: Задача
+        few: Задачи
+        many: Задач
+        other: Задачи
+
+    attributes:
+      task:
+        name: Название
+        description: Описание
+

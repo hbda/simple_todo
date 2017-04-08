@@ -38,17 +38,23 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'devise-i18n'
+gem 'dry-monads'
 gem 'cancancan'
 gem 'compass-rails'
+gem 'octicons-rails', git: 'https://github.com/rromanchuk/octicons-rails.git'
 gem 'slim-rails'
+gem 'simple_form'
 gem 'pry-byebug'
 gem 'pry-rails'
+gem 'rails-i18n'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
   gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-collection_matchers'
+  gem 'shoulda-matchers'
 end
 
 group :development do

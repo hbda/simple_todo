@@ -14,10 +14,13 @@ module SimpleTodo
 
     config.autoload_paths += Dir["#{config.root}/app/**/"]
 
+    config.i18n.default_locale = :ru
+
     config.generators do |generate|
       # generate.fixture_replacement :factory_girl, dir: 'spec/factories'
       generate.helper false
-      # generate.stylesheets false
+      generate.stylesheets false
+      generate.javascripts false
       generate.test_framework :rspec
       generate.view_specs false
     end

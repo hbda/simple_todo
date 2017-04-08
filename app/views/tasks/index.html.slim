@@ -1,0 +1,34 @@
+h1 Задачи
+
+.tabs
+  - if @view.active?
+    span.tab.active Активные
+    a.tab.completed href=tasks_url(status: :completed) Завершенные
+
+  - else
+    a.tab.active href=tasks_url(status: :active) Активные
+    span.tab.completed Завершенные
+
+- if @view.active?
+  a.form-button.new_task href=new_task_url Создать задачу
+
+table.tasks
+  - @view.tasks.each do |task|
+    tr.task
+      td.status
+        - if task.active?
+          a.status.unchecked href=task_url(task, task: { status: :completed }) data-method='patch' &nbsp;
+        - else
+          a.status.checked href=task_url(task, task: { status: :active }) data-method='patch' &nbsp;
+
+      td.task_name
+        a href=task_url(task) = task.name
+
+      - if @view.active?
+        td.priority
+          a.octicon.octicon-triangle-up href=task_change_priority_url(task, direction: 'up') data-method='post'
+          a.octicon.octicon-triangle-down href=task_change_priority_url(task, direction: 'down') data-method='post'
+        td.actions
+          a.octicon.octicon-pencil href=edit_task_url(task)
+          a.octicon.octicon-trashcan href=task_url(task) data-method='delete'
+
