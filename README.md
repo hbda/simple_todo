@@ -1,24 +1,10 @@
-# README
+# Тестовое задание
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Нужно реализовать веб-интерфейс для управления списком задач (TODO)
+Должен быть реализован, как минимум, следующий функционал:
+- Просмотр списка задач
+- Создание задачи
+- Удаление задачи
+- Редактирование задачи
+- Изменение статуса выполнения задачи
+- Изменение порядка задач
